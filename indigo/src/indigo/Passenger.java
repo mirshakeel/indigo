@@ -1,10 +1,9 @@
 package indigo;
-
 public class Passenger {
 	private String passengerName, passengerEmail,passengerGroup;
-	private long   passengerPhoneNumber;
+	private Long   passengerPhoneNumber;
 
-	  Passenger(String passengerName, String passengerEmail ,String passengerGroup, long passengerPhoneNumber ){
+	  Passenger(String passengerName, String passengerEmail ,String passengerGroup, Long passengerPhoneNumber ){
 	  	this.passengerName 		  = passengerName;
 	  	this.passengerEmail 	  = passengerEmail;
 	  	this.passengerGroup   	  = passengerGroup;
@@ -23,7 +22,7 @@ public class Passenger {
 		return passengerGroup; 
 	}
 
-	public long getPassengerPhoneNumber(){
+	public Long getPassengerPhoneNumber(){
 		return passengerPhoneNumber;
 	}
 
@@ -39,7 +38,7 @@ public class Passenger {
 		this.passengerGroup = passengerGroup;
 	}
 
-	void setPassengerPhoneNumber(long passengerPhoneNumber){
+	void setPassengerPhoneNumber(Long passengerPhoneNumber){
 		this.passengerPhoneNumber = passengerPhoneNumber;
 	}
 	void display() {

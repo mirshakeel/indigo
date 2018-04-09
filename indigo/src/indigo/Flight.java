@@ -3,22 +3,24 @@ package indigo;
 import java.util.ArrayList;
 
 class Flight {
-	private int 	flightNo,noOfStops;
-	private String  flightDate,flightArrivalTime,flightDepartureTime,flightType,flightSourceLocation,flightDestination;
+	private int 	flightNo,noOfStops,bookingCost;
+	private String  flightDate,flightArrivalTime,flightDepartureTime,flightType,flightSourceLocation,flightDestination,flightDuration;
 	private 		ArrayList<Passenger> listOfPassengers;
 	private 		Plane planeRef;
 	
 		
-		Flight(Plane planeRef,int flightNo, int noOfStops, String flightSourceLocation,String flightDestination, String flightDate, String flightArrivalTime, String flightDepartureTime, String flightType){
+		Flight(Plane planeRef,int flightNo, int noOfStops,int bookingCost, String flightSourceLocation,String flightDestination, String flightDate, String flightArrivalTime, String flightDepartureTime, String flightType , String flightDuration){
 			this.planeRef			  = planeRef;
 			this.flightNo 		      = flightNo;
 			this.noOfStops 		      = noOfStops;
+			this.bookingCost          = bookingCost;
 			this.flightDate 	      = flightDate;
 			this.flightArrivalTime    = flightArrivalTime;
 			this.flightDepartureTime  = flightDepartureTime;
 			this.flightType			  = flightType;
 			this.flightSourceLocation = flightSourceLocation;
 			this.flightDestination    = flightDestination;
+			this.flightDuration 	  = flightDuration;
 			listOfPassengers		  = new ArrayList<>(); 
 			
 		}
@@ -46,6 +48,9 @@ class Flight {
 	public int getNoOfStops(){
 		return noOfStops;
 	}
+	public int getBookingCost() {
+		return bookingCost;
+	}
 	public String getFlightSourceLocation() {
 		return flightSourceLocation;
 	}
@@ -65,11 +70,17 @@ class Flight {
 	public String getFlightType(){
 		return flightType;
 	}
+	public String getFlightDuration(){
+		return flightDuration;
+	}
 	void setFlightNo(int flightNo){
 		this.flightNo = flightNo;
 	}
 	void setNoOfStops(int noOfStops){
 		this.noOfStops = noOfStops;
+	}
+	void setBookingCost(int bookingCost) {
+		this.bookingCost = bookingCost;
 	}
 	void setFlightSourceLocation(String flightSourceLocation) {
 		this.flightSourceLocation = flightSourceLocation;
@@ -90,6 +101,9 @@ class Flight {
 	void setFlightType(String flightType){
 		this.flightType = flightType;
 	}
+	void setFlightDuration(String flightDuration) {
+		this.flightDuration = flightDuration;
+	}
 	
 	
 	
@@ -106,7 +120,10 @@ class Flight {
 		}
 		
 		listOfPassengers.add(passenger);
-		System.out.println("Passenger added Successfully");
+		System.out.println("Booking available");
 	
 	}
+	
+	
+	
 }

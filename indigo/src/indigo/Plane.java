@@ -1,6 +1,5 @@
 package indigo;
-import java.util.ArrayList;
-class Plane{
+public class Plane{
 
     private int    noOfSeats,noOfAirHostess;
 	private String pilotName;
